@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Detail</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <title>รายละเอียดรีวิว</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+      color: #222;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #34495e;
+      max-width: 600px;
+      word-wrap: break-word;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="titleDisplay">กำลังโหลด...</h1>
+
+  <script>
+    // ฟังก์ชันดึงค่า query string
+    function getQueryParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
+
+    const title = getQueryParam('title');
+    const titleDisplay = document.getElementById('titleDisplay');
+
+    if (title) {
+      titleDisplay.textContent = decodeURIComponent(title);
+    } else {
+      titleDisplay.textContent = 'ไม่มีข้อมูลชื่อเรื่อง';
+    }
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>
