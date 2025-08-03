@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ScenePlay</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html lang="th">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ScenePlay | รีวิวหนัง & เกม</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>รีวิวหนัง & เกม</h1>
+    <p>เว็บรีวิวหนังและเกมที่คุณไม่ควรพลาด</p>
+  </header>
+
+  <main>
+    <section class="review-section">
+      <h2>รีวิวหนังยอดนิยม</h2>
+      <ul class="review-list">
+        <li>
+          <h3>รีวิวหนัง Marvel: Avengers Endgame</h3>
+          <p>หนังแอ็คชั่นและซูเปอร์ฮีโร่ที่เต็มไปด้วยอารมณ์และความตื่นเต้น</p>
+        </li>
+        <li>
+          <h3>รีวิวหนังไทย: นาคี 2</h3>
+          <p>ดราม่าพร้อมความลึกลับ ที่สะท้อนวัฒนธรรมไทยได้อย่างลึกซึ้ง</p>
+        </li>
+        <li>
+          <h3>รีวิวหนังอนิเมะ: Your Name</h3>
+          <p>ภาพสวย เนื้อเรื่องตราตรึงใจ ซึ้งกินใจผู้ชมทุกเพศทุกวัย</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="review-section">
+      <h2>รีวิวเกมยอดนิยม</h2>
+      <ul class="review-list">
+        <li>
+          <h3>Genshin Impact</h3>
+          <p>เกมแนว open-world ที่มีกราฟิกสุดอลังการและระบบต่อสู้ที่น่าตื่นเต้น</p>
+        </li>
+        <li>
+          <h3>Among Us</h3>
+          <p>เกมสืบสวนออนไลน์ที่เล่นง่าย แต่เต็มไปด้วยความสนุกและลุ้นระทึก</p>
+        </li>
+        <li>
+          <h3>Call of Duty: Warzone</h3>
+          <p>เกมยิง FPS สุดมันส์ที่มีโหมด Battle Royale ยอดฮิต</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 เว็บรีวิวหนัง & เกม โดย InfBrain</p>
+  </footer>
+  
+  <script>
+  // เมื่อโหลดหน้าเสร็จ
+  document.addEventListener('DOMContentLoaded', () => {
+    // เลือกทุก <li> ใน .review-list
+    const items = document.querySelectorAll('.review-list li');
+
+    items.forEach(li => {
+      // หา <h3> ใน <li> เพื่อดึงชื่อเรื่อง
+      const title = li.querySelector('h3').textContent.trim();
+
+      // ใส่ข้อมูลชื่อเรื่องใน attribute data-title
+      li.setAttribute('data-title', title);
+
+      // เพิ่ม event click ให้ <li>
+      li.style.cursor = 'pointer';
+      li.addEventListener('click', () => {
+        const encodedTitle = encodeURIComponent(title);
+        // เปลี่ยนหน้าไป detail.html พร้อมส่งชื่อเรื่องใน query string
+        window.location.href = `detail.html?title=${encodedTitle}`;
+      });
+    });
+  });
+  </script>
+</body>
+</html>
+<!-- partial -->
+  
+</body>
+</html>

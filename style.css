@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ฟ้อนต์และพื้นหลัง */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #2c3e50;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ส่วนหัว */
+header {
+  background-color: #34495e;
+  color: #ecf0f1;
+  padding: 30px 20px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+header p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+/* ส่วนเนื้อหา */
+main {
+  flex-grow: 1;
+  padding: 30px 15px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* ส่วนรีวิว */
+.review-section {
+  margin-bottom: 50px;
+}
+
+.review-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  border-left: 4px solid #2980b9;
+  padding-left: 12px;
+}
+
+/* รายการรีวิว */
+.review-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+.review-list li {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.review-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(41, 128, 185, 0.25);
+}
+
+.review-list h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: #34495e;
+  font-weight: 600;
+}
+
+.review-list p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555555;
+}
+
+/* ส่วนท้าย */
+footer {
+  background-color: #34495e;
+  color: #ecf0f1;
+  text-align: center;
+  padding: 20px 10px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  box-shadow: 0 -4px 8px rgba(0,0,0,0.1);
+}
